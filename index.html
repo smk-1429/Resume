@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumePro - Smart Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Resume<span>Pro</span></div>
+    <nav>
+        <a href="#builder">Builder</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Create a Resume That Gets Noticed</h1>
+        <p>Build a professional, ATS-friendly resume in minutes.</p>
+        <a href="#builder" class="btn">Build My Resume</a>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="card">
+        <h3>⚡ Fast</h3>
+        <p>Create your resume quickly using our simple builder.</p>
+    </div>
+    <div class="card">
+        <h3>🤖 ATS Friendly</h3>
+        <p>Check your resume against common ATS requirements.</p>
+    </div>
+    <div class="card">
+        <h3>📄 Professional</h3>
+        <p>Generate a clean and professional resume layout.</p>
+    </div>
+</section>
+
+<section id="builder" class="builder">
+
+    <div class="form">
+        <h2>Resume Builder</h2>
+
+        <input id="name" placeholder="Full Name">
+        <input id="email" placeholder="Email">
+        <input id="phone" placeholder="Phone">
+        <input id="role" placeholder="Job Title">
+
+        <textarea id="summary"
+            placeholder="Professional Summary"></textarea>
+
+        <textarea id="skills"
+            placeholder="Skills (comma separated)"></textarea>
+
+        <textarea id="education"
+            placeholder="Education"></textarea>
+
+        <textarea id="experience"
+            placeholder="Work Experience"></textarea>
+
+        <button onclick="generateResume()">Generate Resume</button>
+    </div>
+
+    <div class="preview">
+        <div class="score">
+            Resume Score: <strong id="score">0%</strong>
+        </div>
+
+        <div id="resume">
+            <h1>Your Name</h1>
+            <p class="role">Your Job Title</p>
+            <p>Email | Phone</p>
+
+            <hr>
+
+            <h2>Profile</h2>
+            <p id="rSummary">Your professional summary will appear here.</p>
+
+            <h2>Skills</h2>
+            <p id="rSkills">Your skills will appear here.</p>
+
+            <h2>Education</h2>
+            <p id="rEducation">Your education will appear here.</p>
+
+            <h2>Experience</h2>
+            <p id="rExperience">Your experience will appear here.</p>
+        </div>
+
+        <button class="download" onclick="window.print()">
+            Download / Print Resume
+        </button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 ResumePro | Smart Resume Builder</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
